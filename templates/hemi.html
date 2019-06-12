@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <p><a class="btn btn-primary btn-lg" href="/" role="button">Return Home</a></p>
+    <div class="row" id="mars-hemisph">
+        <div class="col-md-12">
+            <h1 align="center">Mars Hemispheres</h1>
+            {% for item in mars.hemisph_img %}
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img class="card-img-top" src="{{item.img_url}}", alt="Hemisphere">
+                        <h2 class="card-text">{{item.title}}</h2>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
